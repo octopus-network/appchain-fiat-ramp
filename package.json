@@ -18,12 +18,14 @@
     "@near-wallet-selector/my-near-wallet": "^7.0.3",
     "@near-wallet-selector/near-wallet": "^7.0.3",
     "@near-wallet-selector/wallet-connect": "^7.0.3",
+    "crypto-js": "^4.1.1",
     "framer-motion": "^7.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rxjs": "^7.5.7"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
