@@ -53,7 +53,10 @@ function App() {
       JSON.stringify(request.contractCall)
     )
     url.searchParams.append('apiKey', API_KEY)
-    url.searchParams.append('signature', generateSign(request, API_SECRET))
+    url.searchParams.append(
+      'signature',
+      generateSign({ ...request, toAmount: amount }, API_SECRET)
+    )
     window.open(url.toString(), '_blank')
   }
 
