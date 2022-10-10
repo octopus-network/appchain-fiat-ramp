@@ -36,7 +36,7 @@ export function convertToString(rec: Record<any, any>): string[] {
 export const generateSign = (rec: Record<any, any>, secret: string) => {
   const forSign = convertToString(rec)
 
-  return crypto.enc.Hex.stringify(crypto.HmacSHA256(secret, forSign.join('')))
+  return crypto.enc.Hex.stringify(crypto.HmacSHA256(forSign.join(''), secret))
 }
 
 function App() {
@@ -53,6 +53,7 @@ function App() {
       JSON.stringify(request.contractCall)
     )
     url.searchParams.append('apiKey', API_KEY)
+
     url.searchParams.append(
       'signature',
       generateSign({ ...request, toAmount: amount }, API_SECRET)
