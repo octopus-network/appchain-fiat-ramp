@@ -4,10 +4,13 @@ import { Box, Button, Flex, Heading, Input } from '@chakra-ui/react'
 import * as crypto from 'crypto-js'
 
 const RELAYER_ADDRESS = 'guest-book.testnet'
-const API_KEY = '6170fa03-5dcd-42ea-bef6-b3eab64cf6b5'
+const API_KEY = '08bce6b3-4169-4944-ae78-aaca9f0e2a66'
 const API_SECRET =
-  'Y2VjZDYxYjE4OGM0Y2M0MjE4MmUyMDU1YTc0ZDNhNTNjMDNiNjUxODUzZDBkZTRhNGQ'
+  'NTY5NWE0M2ViYmQ0NDQ5YTYxYjE0OTg2ZmFlYTUzM2JiNzVjZmY4OWMyYzViMWJkOGQ'
 
+// For AppChain usage:
+//   toWallet = registry address
+//   method should notificate registry contract the target substrate address and amount
 const request = {
   toCurrency: 'NEAR',
   toWallet: RELAYER_ADDRESS,
